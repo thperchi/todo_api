@@ -47,7 +47,7 @@ class TodoList implements UserOwnedInterface
     private $due_date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="todoLists")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="lists")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
