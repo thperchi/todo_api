@@ -8,6 +8,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\Security\Core\Security;
 
 /**
@@ -31,7 +32,7 @@ class ValidateTaskController extends AbstractController
             else $data->setIsDone(false);
             $this->em->persist($data);
             $this->em->flush();
-        }
+        } else throw new AccessDeniedException();
 
         return new JsonResponse(array(
             'id' => $data->getId(),
