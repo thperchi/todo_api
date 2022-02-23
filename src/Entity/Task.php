@@ -21,6 +21,7 @@ use Doctrine\ORM\Mapping as ORM;
  *          "method"="get",
  *          "path"="task/{id}/validate",
  *          "controller"=ValidateTaskController::class,
+ *          "security"="object.getList().getUser() == user"
  *      }
  *  }
  * )

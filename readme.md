@@ -28,8 +28,8 @@ Projet d'API de Todolist pour le test technique de Mon Petit Placement.
 * Authentification via JWT
 * Possibilité de créer une todolist et des taches associées
 * Gestion de la todolist et des taches associcées par l'utilisateur parent seulement
-* Possibilité de filtrer les todolistes par nom
-* Possibilité de filtrer les taches validées ou non
+* Possibilité de filtrer les todolistes par nom via /api/todo_lists?name=""
+* Possibilité de filtrer les taches validées ou non /api/tasks?is_done=true/false
 
 ### Librairies utilisées
 
